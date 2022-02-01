@@ -1,0 +1,1983 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 17px;
+}
+:root {
+  --blue: #9abec1;
+  --black: #333030;
+  --red: #e92424;
+}
+/* .container{
+  padding: 0 5rem;
+} */
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  position: absolute;
+  width: 80%;
+  top: 0;
+  z-index: 2;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+.logo .dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0.2rem;
+  background: var(--black);
+  border-radius: 50%;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+a:hover {
+  color: var(--blue);
+}
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: var(--blue);
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a:last-child {
+  margin-right: 0rem;
+}
+.nav-links .active {
+  color: var(--blue);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 1, 11, 1) 0%,
+    rgba(121, 9, 9, 1) 36%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+::-webkit-scrollbar-track {
+  background: #e4a576;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+    circle,
+    rgba(52, 1, 11, 1) 0%,
+    rgba(121, 9, 9, 1) 36%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* Hero */
+.hero {
+  background: var(--blue);
+  padding: 5rem 10% 0rem 10%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  background: var(--black);
+  width: 65rem;
+  height: 37rem;
+  border-radius: 20rem;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 0;
+  right: -15.3rem;
+  top: -10rem;
+}
+.hero-bg img {
+  transform: rotate(45deg);
+  height: 35rem;
+  margin-left: 7rem;
+  margin-bottom: 0rem;
+}
+.hero .intro {
+  position: absolute;
+  margin-bottom: 7rem;
+  z-index: 1;
+}
+.hero .intro h1 {
+  font-size: 70px;
+}
+.hero .intro h2 {
+  margin: 1rem 0;
+  font-size: 35px;
+}
+.hero .intro button {
+  background: var(--red);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-radius: 3px;
+  box-shadow: 10px 10px 24px -1px rgba(123, 123, 123, 0.75);
+}
+.scroll {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+.scroll a {
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.scroll a:hover {
+  color: var(--black);
+}
+.scroll .svg {
+  margin-right: 0.5rem;
+}
+/* brands */
+.brands {
+  min-height: 100vh;
+  padding: 7rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.brand:last-child {
+  margin-bottom: 0rem;
+}
+.brand h2 {
+  font-size: 60px;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.brand img {
+  height: 15rem;
+}
+.brand .img {
+  flex: 1;
+}
+.brands .desc {
+  flex: 1;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.brand.row-reverse .img {
+  display: flex;
+  justify-content: flex-end;
+}
+.brands .bottom-img {
+  position: absolute;
+  right: -15rem;
+  bottom: -4rem;
+  z-index: 2;
+}
+/* Footer */
+footer {
+  color: white;
+  background: var(--black);
+  padding: 3rem 0;
+  text-align: center;
+}
+footer .logo {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+footer .logo .dot {
+  background: var(--blue);
+}
+footer h3 {
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+footer p {
+  width: 50%;
+  margin: 0 auto 1rem auto;
+  color: rgb(156, 156, 156);
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-right: 0.5rem;
+}
+footer .social a:last-child {
+  margin-right: 0;
+}
+footer .social svg {
+  color: white;
+}
+#check,
+.menu {
+  display: none;
+}
+/* Responsive */
+/* @media (max-width: 375px) { */
+@media (max-width: 750px) {
+  /* Nav */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(20, 20, 20);
+    padding: 2rem;
+    right: -250px;
+    transition: all ease-in-out 500ms;
+    z-index: 98;
+  }
+  .nav-links a {
+    display: inline-block;
+    margin: 0;
+  }
+  .menu {
+    cursor: pointer;
+    background: var(--black);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 2.5rem;
+    z-index: 99;
+  }
+  #check:checked ~ .nav-links {
+    right: 0;
+  }
+
+  /* Hero */
+  .hero .intro{
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .hero .intro h1 {
+    font-size: 50px;
+  }
+  .hero .intro h2 {
+    font-size: 25px;
+  }
+  .hero-bg{
+    width: 32rem;
+    height: 12rem;
+    right: -13rem;
+    top: 14rem;
+  }
+  .hero-bg img{
+    height: 14rem;
+    margin-left: 2rem;
+  }
+  /* brands */
+  .brand{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+  }
+  .brand h2{
+    font-size: 25px;
+  }
+  .brand img{
+    height: 9rem;
+    margin-bottom: 2rem;
+  }
+  .brands .bottom-img{
+    right: -17rem;
+    bottom: -9rem;
+  }
+  /* Footer */
+  footer p {
+    width: 80%;
+  }
+}
+
+Skip to content
+DEV Community
+Search...
+
+Log in
+Create account
+
+275
+
+86
+
+632
+
+Cover image for How to make an e-commerce website with HTML, CSS and JS - 01
+Modern Web
+Modern Web
+Posted on 13 Sept 2021 • Updated on 8 Jan
+
+How to make an e-commerce website with HTML, CSS and JS - 01
+#
+html
+#
+css
+#
+javascript
+#
+webdev
+e-com website (3 Part Series)
+1
+How to make an e-commerce website with HTML, CSS and JS - 01
+2
+How to make e commerce website with HTML, CSS and JS part 2
+3
+E-commerce website - adding/deleting product from database. Part 3
+Hello, Today in this article, we'll learn to create an e-commerce website using HTML, CSS and JS. This is a part of full stack e-commerce website. In this part we'll only create front end page's UI. We'll create 4 pages in this tutorial - Home page, Product Page, Search Page and 404 page.
+
+To see demo or you want full coding tutorial video for better understanding. You can watch the tutorial below.
+
+Video Tutorial
+
+I appreciate if you can support me by subscribing my youtube channel.
+
+Code
+You can see below, our project's folder structure.
+
+Folder Structure
+
+Download Images, Get Source Code
+
+So let's start coding.
+
+Home Page
+Write basic HTML 5 template in index.html. And link home.css file to index file. Now, create navbar.
+<nav class="navbar">
+<div class="nav">
+    <img src="img/dark-logo.png" class="brand-logo" alt="">
+    <div class="nav-items">
+        <div class="search">
+            <input type="text" class="search-box" placeholder="search brand, product">
+            <button class="search-btn">search</button>
+        </div>
+        <a href="#"><img src="img/user.png" alt=""></a>
+        <a href="#"><img src="img/cart.png" alt=""></a>
+    </div>
+</div>
+</nav>
+Open home.css file. And inside it before start styling. As we'll have same navbar and footer in all pages. I thought of making their styles as a separate file. So import nav.js file inside home.css.
+@import 'nav.css';
+And do navbar related styles inside nav.css.
+
+Nav.css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo{
+    height: 60px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 500px;
+    display: flex;
+}
+
+.search-box{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color: #a9a9a9;
+    outline: none;
+}
+
+.search-btn{
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.nav-items a{
+    margin-left: 20px;
+}
+
+.nav-items a img{
+    width: 30px;
+}
+Output
+nav
+
+Now create links below the navbar.
+<ul class="links-container">
+    <li class="link-item"><a href="#" class="link">home</a></li>
+    <li class="link-item"><a href="#" class="link">women</a></li>
+    <li class="link-item"><a href="#" class="link">men</a></li>
+    <li class="link-item"><a href="#" class="link">kids</a></li>
+    <li class="link-item"><a href="#" class="link">accessories</a></li>
+</ul>
+Above code is inside navbar element.
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #d1d1d1;
+}
+
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #383838;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.link:hover{
+    opacity: 1;
+}
+Output
+nav-2
+
+Great! but as we want navbar in all pages. I am don't like to copy the code. So let's make this navbar with JS dynamically. Open nav.js file. And make a createNav function inside it.
+const createNav = () => {
+    let nav = document.querySelector('.navbar');
+
+    nav.innerHTML = `
+        <div class="nav">
+            <img src="img/dark-logo.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <button class="search-btn">search</button>
+                </div>
+                <a href="#"><img src="img/user.png" alt=""></a>
+                <a href="#"><img src="img/cart.png" alt=""></a>
+            </div>
+        </div>
+        <ul class="links-container">
+            <li class="link-item"><a href="#" class="link">home</a></li>
+            <li class="link-item"><a href="#" class="link">women</a></li>
+            <li class="link-item"><a href="#" class="link">men</a></li>
+            <li class="link-item"><a href="#" class="link">kids</a></li>
+            <li class="link-item"><a href="#" class="link">accessories</a></li>
+        </ul>
+    `;
+}
+
+createNav();
+If you see the above code, Inside the function first I am selecting nav element using querySelector method. And then writing its HTML using innerHTML. And the value of innerHTML is the same HTML elements that we have made in index.html file. You can now remove the HTML elements from there and also import nav.js.
+<nav class="navbar"></nav>
+<script src="js/nav.js"></script>
+Output
+nav-2
+
+Now, let's make its header.
+<!-- hero section -->
+<header class="hero-section">
+    <div class="content">
+        <img src="img/light-logo.png" class="logo" alt="">
+        <p class="sub-heading">best fashion collection of all time</p>
+    </div>
+</header>
+Home.css
+@import 'nav.css';
+
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('../img/header.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .logo{
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.hero-section .sub-heading{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}
+Output
+header
+
+Now, we have to make product card slider. For that code this.
+<section class="product">
+    <h2 class="product-category">best selling</h2>
+</section>
+Note- we are inside index.html file.
+
+Home.css
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.product-category{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+Output
+card slider
+
+Now make product card.
+// inside product section.
+<div class="product-container">
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/card1.png" class="product-thumb" alt="">
+            <button class="card-btn">add to whislist</button>
+        </div>
+        <div class="product-info">
+            <h2 class="product-brand">brand</h2>
+            <p class="product-short-des">a short line about the cloth..</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+        </div>
+    </div>
+    +7 more cards
+</div>
+We'll make these product cards with JS and database dynamically later.
+
+Home.css
+.product-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+
+.product-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.product-image{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.product-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand{
+    text-transform: uppercase;
+}
+
+.product-short-des{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+Output
+slider
+
+Now make, pre and next button of course.
+// before product-container element.
+<button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+<button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+.pre-btn, .nxt-btn{
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn{
+    right: 0;
+}
+
+.pre-btn img, .nxt-btn img{
+    opacity: 0.2;
+}
+
+.pre-btn:hover img, .nxt-btn:hover img{
+    opacity: 1;
+}
+Output
+slider 2
+
+Now, let's make the slider working. Open home.js file. And code this.
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimenstions = item.getBoundingClientRect();
+    let containerWidth = containerDimenstions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+In the above code, I am simply selecting all product containers, next buttons, pre buttons using querySelectorAll method. And then just looping through each container. And adding click event to next button and pre button.
+
+Import the home.js file inside index.html.
+<script src="js/home.js"></script>
+We are done with product cards also. Let's make collections section now.
+<!-- collections -->
+<section class="collection-container">
+    <a href="#" class="collection">
+        <img src="img/women-collection.png" alt="">
+        <p class="collection-title">women <br> apparels</p>
+    </a>
+    <a href="#" class="collection">
+        <img src="img/men-collection.png" alt="">
+        <p class="collection-title">men <br> apparels</p>
+    </a>
+    <a href="#" class="collection">
+        <img src="img/accessories-collection.png" alt="">
+        <p class="collection-title">accessories</p>
+    </a>
+</section>
+.collection-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.collection{
+    position: relative;
+}
+
+.collection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.collection:nth-child(3){
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
+Output
+collection
+
+Now you can copy the product section 2 more times after collection element. And you can also change the images and data. Don't worry we'll make the cards dynamically with database in future.
+
+After done copying product section. The only thing left in our page is footer. So let's make it.
+<footer>
+    <div class="footer-content">
+        <img src="img/light-logo.png" class="logo" alt="">
+        <div class="footer-ul-container">
+            <ul class="category">
+                <li class="category-title">men</li>
+                <li><a href="#" class="footer-link">t-shirts</a></li>
+                <li><a href="#" class="footer-link">sweatshirts</a></li>
+                <li><a href="#" class="footer-link">shirts</a></li>
+                <li><a href="#" class="footer-link">jeans</a></li>
+                <li><a href="#" class="footer-link">trousers</a></li>
+                <li><a href="#" class="footer-link">shoes</a></li>
+                <li><a href="#" class="footer-link">casuals</a></li>
+                <li><a href="#" class="footer-link">formals</a></li>
+                <li><a href="#" class="footer-link">sports</a></li>
+                <li><a href="#" class="footer-link">watch</a></li>
+            </ul>
+            <ul class="category">
+                <li class="category-title">women</li>
+                <li><a href="#" class="footer-link">t-shirts</a></li>
+                <li><a href="#" class="footer-link">sweatshirts</a></li>
+                <li><a href="#" class="footer-link">shirts</a></li>
+                <li><a href="#" class="footer-link">jeans</a></li>
+                <li><a href="#" class="footer-link">trousers</a></li>
+                <li><a href="#" class="footer-link">shoes</a></li>
+                <li><a href="#" class="footer-link">casuals</a></li>
+                <li><a href="#" class="footer-link">formals</a></li>
+                <li><a href="#" class="footer-link">sports</a></li>
+                <li><a href="#" class="footer-link">watch</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+As we did for navbar. Import footer.css inside home.css file.
+
+Home.css
+@import 'nav.css';
+@import 'footer.css';
+Footer.css
+footer{
+    position: relative;
+    width: 100%;
+    padding: 40px 10vw;
+    padding-bottom: 80px;
+    background: #383838;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-content .logo{
+    height: 160px;
+}
+
+.footer-ul-container{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category{
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    list-style: none;
+}
+
+.category-title{
+    grid-column: span 2;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.category .footer-link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-link:hover{
+    color: #fff;
+}
+Output
+footer
+
+Make info elements inside footer.
+<footer>
+    // previous elements
+    <p class="footer-title">about company</p>
+    <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?</p>
+    <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
+    <p class="info">telephone - 180 00 00 001, 180 00 00 002</p>
+    <div class="footer-social-container">
+        <div>
+            <a href="#" class="social-link">terms & services</a>
+            <a href="#" class="social-link">privacy page</a>
+        </div>
+        <div>
+            <a href="#" class="social-link">instagram</a>
+            <a href="#" class="social-link">facebook</a>
+            <a href="#" class="social-link">twitter</a>
+        </div>
+    </div>
+    <p class="footer-credit">Clothing, Best apparels online store</p>
+</footer>
+Footer.css
+.footer-title, .info{
+    color: rgba(255, 255, 255, 0.75);
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.footer-title{
+    margin-top: 80px;
+    color: #fff;
+}
+
+.footer-social-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link{
+    color: #fff;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.social-link:nth-child(1){
+    margin-left: 0;
+}
+
+.footer-credit{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+Output
+footer2
+
+Great Work. As we did for navbar. Let's make this footer also with JS dynamically. Open footer.js file and do the same thing, that we did for navbar.
+const createFooter = () => {
+    let footer = document.querySelector('footer');
+
+    footer.innerHTML = `
+    <div class="footer-content">
+        <img src="img/light-logo.png" class="logo" alt="">
+        <div class="footer-ul-container">
+            <ul class="category">
+                <li class="category-title">men</li>
+                <li><a href="#" class="footer-link">t-shirts</a></li>
+                <li><a href="#" class="footer-link">sweatshirts</a></li>
+                <li><a href="#" class="footer-link">shirts</a></li>
+                <li><a href="#" class="footer-link">jeans</a></li>
+                <li><a href="#" class="footer-link">trousers</a></li>
+                <li><a href="#" class="footer-link">shoes</a></li>
+                <li><a href="#" class="footer-link">casuals</a></li>
+                <li><a href="#" class="footer-link">formals</a></li>
+                <li><a href="#" class="footer-link">sports</a></li>
+                <li><a href="#" class="footer-link">watch</a></li>
+            </ul>
+            <ul class="category">
+                <li class="category-title">women</li>
+                <li><a href="#" class="footer-link">t-shirts</a></li>
+                <li><a href="#" class="footer-link">sweatshirts</a></li>
+                <li><a href="#" class="footer-link">shirts</a></li>
+                <li><a href="#" class="footer-link">jeans</a></li>
+                <li><a href="#" class="footer-link">trousers</a></li>
+                <li><a href="#" class="footer-link">shoes</a></li>
+                <li><a href="#" class="footer-link">casuals</a></li>
+                <li><a href="#" class="footer-link">formals</a></li>
+                <li><a href="#" class="footer-link">sports</a></li>
+                <li><a href="#" class="footer-link">watch</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer-title">about company</p>
+    <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?</p>
+    <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
+    <p class="info">telephone - 180 00 00 001, 180 00 00 002</p>
+    <div class="footer-social-container">
+        <div>
+            <a href="#" class="social-link">terms & services</a>
+            <a href="#" class="social-link">privacy page</a>
+        </div>
+        <div>
+            <a href="#" class="social-link">instagram</a>
+            <a href="#" class="social-link">facebook</a>
+            <a href="#" class="social-link">twitter</a>
+        </div>
+    </div>
+    <p class="footer-credit">Clothing, Best apparels online store</p>
+    `;
+}
+
+createFooter();
+Now you can delete the footer elements from the the index file. And import the footer.js file.
+
+index.html
+<footer></footer>
+
+<script src="js/footer.js"></script>
+Output
+footer2
+
+Great! We are done with homepage. Now, let's create product page.
+
+Product page.
+In product page. Write HTML 5 template. And link home.css, product.css file.
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+And import these JS files.
+<script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/home.js"></script>
+<script src="js/product.js"></script>
+And now you can just make a navbar and footer by adding nav and footer element inside body.
+<nav class="navbar"></nav>
+<footer></footer>
+Output
+Capture
+
+Isn't that simple. You can also copy the product container element from home page to here. After done copy the cards. Let's make product detail section. Make it after navbar.
+<section class="product-details">
+    <div class="image-slider">
+        <div class="product-images">
+            <img src="img/product image 1.png" class="active" alt="">
+            <img src="img/product image 2.png" alt="">
+            <img src="img/product image 3.png" alt="">
+            <img src="img/product image 4.png" alt="">
+        </div>
+    </div>
+</section>
+Product.css
+.product-details{
+    width: 100%;
+    padding: 60px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-slider{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-image: url('../img/product\ image\ 1.png');
+    background-size: cover;
+}
+
+.product-images{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.product-images img{
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-images img.active{
+    opacity: 0.5;
+}
+Output
+image slider
+
+Make details section in the right now.
+<section>
+   // image slider
+   <div class="details">
+        <h2 class="product-brand">calvin klein</h2>
+        <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <span class="product-price">$99</span>
+        <span class="product-actual-price">$200</span>
+        <span class="product-discount">( 50% off )</span>
+
+        <p class="product-sub-heading">select size</p>
+
+        <input type="radio" name="size" value="s" checked hidden id="s-size">
+        <label for="s-size" class="size-radio-btn check">s</label>
+        <input type="radio" name="size" value="m" hidden id="m-size">
+        <label for="m-size" class="size-radio-btn">m</label>
+        <input type="radio" name="size" value="l" hidden id="l-size">
+        <label for="l-size" class="size-radio-btn">l</label>
+        <input type="radio" name="size" value="xl" hidden id="xl-size">
+        <label for="xl-size" class="size-radio-btn">xl</label>
+        <input type="radio" name="size" value="xxl" hidden id="xxl-size">
+        <label for="xxl-size" class="size-radio-btn">xxl</label>
+
+        <button class="btn cart-btn">add to cart</button>
+        <button class="btn">add to wishlist</button>
+    </div>
+</section>
+.details{
+    width: 50%;
+}
+
+.details .product-brand{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.details .product-short-des{
+    font-size: 25px;
+    line-height: 30px;
+    height: auto;
+    margin: 15px 0 30px;
+}
+
+.product-price{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.product-actual-price{
+    font-size: 30px;
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin: 0 20px;
+    font-weight: 300;
+}
+
+.product-discount{
+    color: #ff7d7d;
+    font-size: 20px;
+}
+
+.product-sub-heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 60px 0 10px;
+    font-weight: 300;
+}
+
+.size-radio-btn{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #383838;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 0;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: #383838;
+    cursor: pointer;
+}
+
+.size-radio-btn.check{
+    background: #383838;
+    color: #fff;
+}
+
+.btn{
+    width: 48%;
+    padding: 20px;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid #383838;
+    color: #383838;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.cart-btn{
+    margin-right: 2%;
+    background: #383838;
+    color: #fff;
+}
+Output
+details
+
+Now just a simple section we have to make. A detail description section. Make is outside product-details
+<section class="detail-des">
+    <h2 class="heading">description</h2>
+    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+</section>
+.detail-des{
+    padding: 0 10vw;
+    text-transform: capitalize;
+}
+
+.heading{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.des{
+    color: #383838;
+    line-height: 25px;
+}
+Output
+detail
+
+Now make the image slider working, and size button toggle-able. Open product.js file.
+const productImages = document.querySelectorAll(".product-images img"); // selecting all image thumbs
+const productImageSlide = document.querySelector(".image-slider"); // seclecting image slider element
+
+let activeImageSlide = 0; // default slider image
+
+productImages.forEach((item, i) => { // loopinh through each image thumb
+    item.addEventListener('click', () => { // adding click event to each image thumbnail
+        productImages[activeImageSlide].classList.remove('active'); // removing active class from current image thumb
+        item.classList.add('active'); // adding active class to the current or clicked image thumb
+        productImageSlide.style.backgroundImage = `url('${item.src}')`; // setting up image slider's background image
+        activeImageSlide = i; // updating the image slider variable to track current thumb
+    })
+})
+And then code this.
+// toggle size buttons
+
+const sizeBtns = document.querySelectorAll('.size-radio-btn'); // selecting size buttons
+let checkedBtn = 0; // current selected button
+
+sizeBtns.forEach((item, i) => { // looping through each button
+    item.addEventListener('click', () => { // adding click event to each 
+        sizeBtns[checkedBtn].classList.remove('check'); // removing check class from the current button
+        item.classList.add('check'); // adding check class to clicked button
+        checkedBtn = i; // upading the variable
+    })
+})
+Great Work! we are done with product page also. Now we have to make search page which is very simple.
+
+Search Page
+As we made navbar and footer in the product page. Do the same for this page also. Link these files to it.
+<head>
+   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <footer></footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+Now make the product cards. First make the heading.
+<section class="search-results">
+    <h2 class="heading">search results for <span>product</span></h2>
+</section>
+Search.css
+.search-results{
+    width: 100%;
+    padding: 60px 0;
+}
+
+.heading{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 40px;
+    padding: 0 10vw;
+}
+
+.heading span{
+    font-weight: 700;
+}
+Output
+heading
+For cards, we'll use the same card we made for homepage. Just copy the product-container element from homepage and paste it inside search-results.
+
+But we are using flex box which will make the cards go side by side. But we don't want that for our search page. So just over write the product-container elements property.
+
+Product.css
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    grid-row-gap: 40px;
+}
+Output
+grid
+
+Now, we are almost done. The only page we have to create is 404 page.
+
+404 Page
+Do the same for this page also to make navbar. I didn't made footer in this page but if you want you can make it too. After making navbar. Link 404.css file. And let's code the page.
+<img src="img/404.png" class="four-0-four-image" alt="">
+<p class="four-0-four-msg">look like you are lost. Head to beack to our <a href="#">homepage</a></p>
+Footer.css
+.four-0-four-image{
+    display: block;
+    margin: 60px auto;
+}
+
+.four-0-four-msg{
+    text-align: center;
+    text-transform: capitalize;
+    color: #383838;
+}
+
+.four-0-four-msg a{
+    color: #383838;
+}
+Output
+404
+
+So that's sit for today. Great work. I know it was a lot. But e-commerce website is not that simple. Don't forget to follow me on youtube and dev.to if you don't want to miss the next part of this series.
+
+I hope you understood each and everything. If you have doubt or I missed something let me know in the comments.
+
+Articles you may find Useful
+Best CSS Effect
+Infinte CSS loader
+Disney+ Clone
+Youtube API - Youtube Clone
+TMDB - Netflix Clone
+I really appreciate if you can subscribe my youtube channel. I create awesome web contents.
+
+
+
+Source Code, Donate me on Paypal
+
+Your donation really motivates me to do more amazing tutorials like this. Support me on patreon, Buy me a coffee, Donate me on paypal
+
+Thanks For reading.
+
+e-com website (3 Part Series)
+1
+How to make an e-commerce website with HTML, CSS and JS - 01
+2
+How to make e commerce website with HTML, CSS and JS part 2
+3
+E-commerce website - adding/deleting product from database. Part 3
+Discussion (35)
+Subscribe
+pic
+Add to the discussion
+ 
+arberbr profile image
+Arber Braja
+•
+Sep 14 '21 • Edited on Sep 14
+
+Cool stuff but some of the practices shown are not the best ones. Example you are using '@import' inside a CSS file. Which is not that good for performance. In simple HTML, CSS and JS site, its better if you have multiple CSS being request using the traditional link href method, especially if your host is http2 ready.
+
+Also, HTML being handled in JS. That also is not the best separation of concerns. I know, in frameworks/libraries like React for example you write HTML (in React's case. JSX) inside JS but those apps are built like that, that the state builds the UI and you need to tie up really close the UI and components with the state for the app to work as expected.
+
+On this scenario we dont have this kind of requirement.
+
+Not saying it does not work. It works and it works well. Is it a good thing to mix technologies though like this? Probably not.
+
+Just some personal opinions. Hope on the next articles in the series you will improve these suggestions.
+
+
+6
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 14 '21
+
+Thanks for your comment. I'll surely follow your advice for better performance ☺️
+
+
+5
+ likes
+Reply
+ 
+sojasmine profile image
+Sojasmine Gjerstad
+•
+Sep 13 '21
+
+Thanks for sharing😍.
+
+
+5
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 13 '21
+
+Thanks☺️
+
+
+1
+ like
+Reply
+ 
+rkfr profile image
+Roman
+•
+Sep 14 '21
+
+Why you're create some template using js?
+It's not ok for seo, this saves a couple of lines of html code, but the browser needs to parse the js additionally, which does not have a very positive effect on performance and it doesn't make much sense
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 14 '21
+
+Oh! I really didn't knew about it. Thanks for telling ☺️
+
+
+2
+ likes
+Reply
+ 
+leenguyen profile image
+Lee Nguyen
+•
+Sep 16 '21
+
+Nice article. I have a suggestion when you style in css. You should restrict style use global tag like "a" tag, "img" tag because when the css read your file it will read from right to left. Example: That case " .collection p ". It will style all your "p" tag after that it have selected the "p" tag in .collection class. It is a option for practice performance. Again Nice article!
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 16 '21
+
+Thanks for telling☺️
+
+
+1
+ like
+Reply
+ 
+rakes97 profile image
+free
+•
+Sep 16 '21
+
+i really appriciate you. i am learning website making for self interest.i impresed your style of communication. my cared are the declinned for patron payment any other way to donate ple tell me, i want more learn from here. i completed 50% commerce website
+please support me to learn further thanks
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 16 '21
+
+I am glad you liked the tutorial and actually following it. Its really gives me confidence. I don't know why patreon is blocking you. But if want you can donate me on paypal
+
+
+1
+ like
+Reply
+ 
+urielbitton profile image
+Uriel Bitton
+•
+Sep 15 '21
+
+You need to learn about flexbox (and css grid). You'll thank me later.
+
+
+1
+ like
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 15 '21
+
+I know about flex boxand css grid. What happen? Did I messed up somewhere😅
+
+
+1
+ like
+Reply
+ 
+urielbitton profile image
+Uriel Bitton
+•
+Sep 17 '21
+
+Haha yeah you should not be using top: 50%, translate(-50%)... use flexbox instead
+
+
+2
+ likes
+Thread
+kunaal438 profile image
+Modern Web 
+•
+Sep 17 '21
+
+Yeah of course there are multiple ways to centre a div.
+
+
+1
+ like
+Thread
+urielbitton profile image
+Uriel Bitton
+•
+Sep 17 '21
+
+there are but the hack you used isn't really great. Flexbox is simply the best and most standard way today.
+
+
+2
+ likes
+Reply
+ 
+tleperou profile image
+Thomas Lepérou
+•
+Sep 15 '21
+
+The final UI looks nice. Could be nice to see a CSS pattern such as BEM, there're cool stuff like grid.
+
+Willing for the integration of the mobile responsive version.
+
+Also, I'd like to warn our dear newbie readers to reproduce this only in order to practice writing code -- for CSS basically. Rely on proven patterns, proven libraries and frameworks, follow good practices, start from building your state, question the CI/CD, SEO basics; to sum up: give attention to the main picture of your e-commerce project by relying on already proven practices.
+
+Thank you so much for sharing.
+
+
+1
+ like
+Reply
+ 
+renita_dan_256bbcb56c808d profile image
+Renita Dan
+•
+Nov 23 '21 • Edited on Dec 1
+
+Thanks for sharing, it is easier to learn this language when you have detailed tutorials which are easy to follow. However, I haven't tried to build a site yet using coding, but I am looking for it. I have some experience, as I created for my company a recruitment site in a record time just by following this article boxmode.com/recruitment-website-bu.... And this made me want to find out about this domain more.
+
+
+1
+ like
+Reply
+ 
+wesllycode profile image
+wesllycode
+•
+Sep 16 '21
+
+Muito bom o seu conteúdo, vou seguir aqui.
+Very nice!
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 16 '21
+
+Thanks ☺️
+
+
+1
+ like
+Reply
+ 
+knightwarrior93 profile image
+SHAMIM
+•
+Sep 15 '21
+
+thanks for the clarification....
+
+
+2
+ likes
+Reply
+ 
+mastarachef profile image
+mastarachef
+•
+Sep 20 '21
+
+nice:)
+
+
+2
+ likes
+Reply
+ 
+parinrulez profile image
+parinrulez
+•
+Sep 14 '21
+
+Excited to follow this tutorial and create one for myself! Just asking, are you going to make it a completely functional e-commerce website?
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 14 '21
+
+Yes I will make it functional. But it is not going to be like amazon because amazon has lots of lots of features😅
+
+
+2
+ likes
+Reply
+ 
+sirkif profile image
+Adam WaƘiƑ
+•
+Sep 14 '21
+
+Amazing work
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 14 '21
+
+Thanks☺️
+
+
+1
+ like
+Reply
+ 
+kidz94 profile image
+Kidz
+•
+Sep 18 '21
+
+Very thank you to you✓
+
+
+2
+ likes
+Reply
+ 
+obaino82 profile image
+Obaino82
+•
+Sep 14 '21
+
+Nice work 👌
+
+
+2
+ likes
+Reply
+ 
+jefersoncf profile image
+Jeferson Ferreira
+•
+Sep 13 '21
+
+Projeto muito bom, obrigado por compartilhar
+
+
+2
+ likes
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 13 '21
+
+Thanks☺️
+
+
+1
+ like
+Reply
+ 
+strivecode profile image
+Abdul-Razak
+•
+Sep 18 '21
+
+Great work. But like others have mention, I doubt if your page is responsive. But I did learn a great deak from your article. Kudos!
+
+
+1
+ like
+Reply
+ 
+brothersi profile image
+brotherSI
+•
+Sep 14 '21
+
+Much appreciation for sharing this 🙂
+
+
+1
+ like
+Reply
+ 
+knightwarrior93 profile image
+SHAMIM
+•
+Sep 15 '21
+
+is it okay to keep all the files inside pubic folder ? doesn't that affect any security protocol !
+
+
+1
+ like
+Reply
+ 
+kunaal438 profile image
+Modern Web 
+•
+Sep 15 '21
+
+I don't think so because our each files inside public folder are static site. And we will manage the data with server.
+
+
+1
+ like
+Reply
+ 
+bajpangosh profile image
+Bajpan Gosh
+•
+Sep 14 '21
+
+Nice Share, and could you add purchase via whatsapp button?
+
+
+1
+ like
+Reply
+ 
+tamomarvin profile image
+Tamo Marvin
+•
+Jan 20
+
+Please sir can you make the resposive part of this your ecomerce website, i will be very happy if you do that.
+
+
+1
+ like
+Reply
+View full discussion (35 comments)
+Code of Conduct • Report abuse
+Read next
+withshubh profile image
+Build GitHub star history tracker in 10 minutes using low-code
+Shubhendra Singh Chauhan - Jan 21
+
+mouly22 profile image
+What is Module?
+Umme Abira Azmary - Jan 21
+
+buddhadebchhetri profile image
+JavaScript ES6
+Buddhadeb Chhetri - Jan 23
+
+dev_nv profile image
+Important full forms every web developer/programmer/IT guy must know.
+N-V-A-2005 - Jan 20
+
+
+Modern Web
+Follow
+Hello, I am kunaal a fullstack developer.I have a youtube channel "Modern Web" where I teach to make awesome web UI/ UX. Don't forget to checkout my youtube channel
+LOCATION
+Delhi, India
+JOINED
+2 May 2021
+More from Modern Web
+How to make fully working ecom website part 2 [ Source code ]
+#html #css #webdev #javascript
+[With source code] How to make working instagram in 2022.
+#webdev #beginners #javascript #programming
+Youtube channels you should follow for web development
+#css #beginners #javascript #programming
+.product-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+
+.product-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.product-image{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.product-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand{
+    text-transform: uppercase;
+}
+
+.product-short-des{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
